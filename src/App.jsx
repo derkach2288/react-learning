@@ -1,5 +1,6 @@
 import "./App.css";
 import Button from "./components/Button";
+import Modal from "./components/Modal"
 
 export const animal = "Dog";
 
@@ -26,8 +27,26 @@ function App() {
 
   const rich = true;
 
+const buttonNames = [
+  "Отправить",
+  "Получить товар",
+  "Купить",
+  "Заказать",
+  "Продать",
+];
+  
+  const buttons = buttonNames.map((value) => {
+    return (
+      <div className="button-container">
+        <Button name={value} />
+      </div>
+    );
+  })
+  
   return (
     <div className="App">
+      {buttons}
+      
       {name}
       {/* JSX позволяет нам передавать переменные с помощью фигурных скобок в HTML дерево */}
       <p id={tegJobId}>I am {job}</p>
@@ -41,19 +60,19 @@ function App() {
       <div>{numberOfFriends(7)}</div>
       <div>{rich ? "Вы богатый" : "Вы не в достатке"}</div>
       <div className="button-container">
-        <Button name="Отправить" type="submit" />
+        <Button name="Отправить" />
       </div>
       <div className="button-container">
-        <Button name="Получить товар" type="submit" />
+        <Button name="Получить товар" />
       </div>
       <div className="button-container">
-        <Button>Children element</Button>
+        <Button name="Купить" />
       </div>
       <div className="button-container">
-        <Button />
+        <Button name="Заказать" />
       </div>
       <div className="button-container">
-        <Button />
+        <Button name="Продать" />
       </div>
     </div>
   );
