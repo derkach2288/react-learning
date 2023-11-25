@@ -1,7 +1,9 @@
-import logoAv from './5500.jpg';
+// import logoAv from './5500.jpg';
+import logoAv from '../../image/5500.jpg';
 import "./styles.css";
 
 function ProfileCard({
+  logo = logoAv,
   name = "Oleksandr Derkach",
   job = "developer full stack",
   characters = {
@@ -11,8 +13,8 @@ function ProfileCard({
   hobby
 }) {
   return (
-    <div>
-      <img className='avatar' src={logoAv} alt="logo" />
+    <div className='container'>
+      <img className='avatar' src={logo} alt="logo" />
       <p> Имя, фамилия: {name}</p>
       <p> Работа: {job}</p>
       <p> Цвет волос: {characters.hair} </p>

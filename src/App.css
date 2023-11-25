@@ -7,3 +7,10 @@
   width: fit-content;
   margin-bottom: 10px;
 }
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}

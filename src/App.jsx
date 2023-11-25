@@ -1,6 +1,8 @@
 import "./App.css";
 import Button from "./components/Button";
 import ProfileCard from "./components/ProfileCard";
+import logo1 from "./image/volga.jpeg";
+import logo2 from "./image/logo2.jpeg";
 
 export const animal = "Dog";
 
@@ -57,8 +59,29 @@ function App() {
         <Button />
       </div>
 
-      <div>
-        <ProfileCard hobby="meditation" />
+      <div className="cards">
+        <div>
+          <ProfileCard hobby="meditation" />
+        </div>
+        <div>
+          <ProfileCard
+            // logo="https://ss.sport-express.ru/userfiles/materials/190/1907029/volga.jpg"
+            logo={logo1}
+            name="Jeck Jonson"
+            hobby="Футбол"
+            job="Инженер"
+            characters={{ hair: "black", height: "185" }}
+          />
+        </div>
+        <div>
+          <ProfileCard
+            logo={logo2}
+            name="Мария Кюри"
+            hobby="Химия"
+            job="Преподаватель"
+            characters={{ hair: "русые", height: "175" }}
+          />
+        </div>
       </div>
     </div>
   );
