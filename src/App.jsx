@@ -3,6 +3,7 @@ import Button from "./components/Button";
 import ProfileCard from "./components/ProfileCard";
 import logo1 from "./image/volga.jpeg";
 import logo2 from "./image/logo2.jpeg";
+import Lesson18 from "./lessons/lesson18"
 
 export const animal = "Dog";
 
