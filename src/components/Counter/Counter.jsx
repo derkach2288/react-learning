@@ -4,16 +4,16 @@ import Button from "../Button";
 
 import "./styles.css";
 
-function Counter() {
-  const [count, setCount] = useState(0);
+function Counter({count, onPlus, onMinus}) {
+  // const [count, setCount] = useState(0);
 
-  const onPlus = () => {
-    setCount((prevValue) => prevValue + 1);
-  };
+  // const onPlus = () => {
+  //   setCount((prevValue) => prevValue + 1);
+  // };
 
-  const onMinus = () => {
-    setCount((prevValue) => prevValue - 1);
-  };
+  // const onMinus = () => {
+  //   setCount((prevValue) => prevValue - 1);
+  // };
 
   return (
     <div className="counter-wrapper">

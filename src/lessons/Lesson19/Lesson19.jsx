@@ -14,6 +14,20 @@ function Lesson19() {
   // пример с картинкой
   const [img, setImg] = useState();
 
+  //---------
+  const [count, setCount] = useState(0);
+
+  const onPlus = () => {
+    setCount((prevValue) => prevValue + 1);
+  };
+
+  const onMinus = () => {
+    setCount((prevValue) => prevValue - 1);
+  };
+
+
+//-------------
+
   const addImg = (imgURL) => {
     setImg(imgURL);
   };
@@ -59,7 +73,7 @@ function Lesson19() {
         />
       </div>
       <div>
-        <Counter />
+        <Counter count={count} onPlus={ onPlus} onMinus={onMinus} />
       </div>
       <div className="buttonControl">
         <Button name="Add Name" onClick={() => setName("Alex")} />
