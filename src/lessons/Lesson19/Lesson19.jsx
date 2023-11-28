@@ -25,8 +25,7 @@ function Lesson19() {
     setCount((prevValue) => prevValue - 1);
   };
 
-
-//-------------
+  //-------------
 
   const addImg = (imgURL) => {
     setImg(imgURL);
@@ -73,7 +72,7 @@ function Lesson19() {
         />
       </div>
       <div>
-        <Counter count={count} onPlus={ onPlus} onMinus={onMinus} />
+        <Counter count={count} onPlus={onPlus} onMinus={onMinus} />
       </div>
       <div className="buttonControl">
         <Button name="Add Name" onClick={() => setName("Alex")} />
