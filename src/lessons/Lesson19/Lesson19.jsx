@@ -11,6 +11,13 @@ function Lesson19() {
   const [name, setName] = useState();
   console.log(name);
 
+  // пример с картинкой
+  const [img, setImg] = useState();
+
+  const addImg = (imgURL) => {
+    setImg(imgURL);
+  };
+
   const addFruites = (newFruitsArray) => {
     setItem((prevValue) => [...prevValue, ...newFruitsArray]);
   };
@@ -55,12 +62,22 @@ function Lesson19() {
         <Counter />
       </div>
       <div className="buttonControl">
-        <Button
-          name="Add Name"
-          onClick={() => setName("Alex")}
-        />
+        <Button name="Add Name" onClick={() => setName("Alex")} />
       </div>
       {name}
+
+      <div>Пример с картинкой</div>
+      {img && <img src={img} alt="" />}
+      <div className="buttonControl">
+        <Button
+          name="Add Img"
+          onClick={() =>
+            setImg(
+              "https://www.azcentral.com/gcdn/-mm-/fd5c5b5393c72a785789f0cd5bd20acedd2d2804/c=0-350-2659-1850/local/-/media/Phoenix/BillGoodykoontz/2014/04/24//1398388295000-Homer-Simpson.jpg?width=2659&height=1500&fit=crop&format=pjpg&auto=webp"
+            )
+          }
+        />
+      </div>
     </div>
   );
 }
