@@ -37,14 +37,14 @@ function HomeWork19() {
     return <li key={`auto-props-${Math.random()}`}>{autoContent()}</li>;
   });
 
-  const addCar = () => {
-    setAuto((prevValue) => ({ ...prevValue, ...porscheCar }));
+  const addCar = (car) => {
+    setAuto((prevValue) => ({ ...prevValue, ...car }));
   };
 
   return (
     <div className="lesson19-wrapper">
       <div className="buttonControl">
-        <Button name="Add Car" onClick={() => addCar()} />
+        <Button name="Add Car" onClick={() => addCar(porscheCar)} />
       </div>
       <div className="itemsControl">{newCar}</div>
     </div>

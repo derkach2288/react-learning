@@ -12,7 +12,7 @@ function HomeWork18() {
       setCount((prevValue) => prevValue - 1);
     };
 
-  return <Counter count={count} onPlus={onPlus} onMinus={onMinus} />;
+  return <Counter count={count} onPlus={onPlus} onMinus={onMinus}/>;
 }
 
 export default HomeWork18;
