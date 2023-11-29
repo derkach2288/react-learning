@@ -13,12 +13,28 @@ function HomeWork19() {
 
   const [auto, setAuto] = useState({});
 
+  // const newCar = Object.keys(auto).map((autoKeys) => {
+  //   return (
+  //     <li key={`auto-props-${Math.random()}`}>
+  //       {autoKeys}: {auto[autoKeys].toString()}{" "}
+  //     </li>
+  //   );
+  // });
+
   const newCar = Object.keys(auto).map((autoKeys) => {
-    return (
-      <li key={`auto-props-${Math.random()}`}>
-        {autoKeys}: {auto[autoKeys].toString()}{" "}
-      </li>
-    );
+    const autoContent = () => {
+      if (autoKeys === "isAvailable") {
+        if (auto[autoKeys]) {
+          return "Available";
+        }
+
+        return "Not available";
+      }
+
+      return `${autoKeys}: ${auto[autoKeys]}`;
+    };
+
+    return <li key={`auto-props-${Math.random()}`}>{autoContent()}</li>;
   });
 
   const addCar = () => {
