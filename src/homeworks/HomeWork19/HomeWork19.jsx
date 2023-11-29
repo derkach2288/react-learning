@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from "react";
 import Button from "../../components/Button";
 
 function HomeWork19() {
@@ -11,18 +11,19 @@ function HomeWork19() {
     isAvailable: true,
   };
 
-  const [auto, setAuto] = useState({})
+  const [auto, setAuto] = useState({});
 
   const newCar = Object.keys(auto).map((autoKeys) => {
     return (
-      <li key={`auto-props-${Math.random()}`}>{autoKeys}: {auto[autoKeys]}</li>
-    )
+      <li key={`auto-props-${Math.random()}`}>
+        {autoKeys}: {auto[autoKeys].toString()}{" "}
+      </li>
+    );
   });
 
   const addCar = () => {
     setAuto((prevValue) => ({ ...prevValue, ...porscheCar }));
-  }
-
+  };
 
   return (
     <div className="lesson19-wrapper">
